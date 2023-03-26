@@ -1,0 +1,18 @@
+Qualcomm/Atheros QCA9531
+MIPS24KEc - big-endian, no fpu
+16 TLB
+
+The SoC interrupt controller is a little derpy.
+
+The Mask register doesn't seem to actually mask 
+interrupts that come up on the stats register.  So 
+the the mask register has to be read and compared 
+to what is read from stats.
+
+UART seems to be a regular 8250/16650 compatible.
+
+Unlike the little-endian mt7688, the fpemu seems
+to work fine on this chip.
+
+The ethernet is mostly a Tulip 2114x compatible.
+
